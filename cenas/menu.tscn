@@ -25,21 +25,20 @@ func _process(delta):
 script = ExtResource("1_brlih")
 
 [node name="Jogar" type="Button" parent="."]
-offset_left = 960.0
+offset_left = 720.0
 offset_top = 222.0
-offset_right = 1431.0
+offset_right = 1191.0
 offset_bottom = 390.0
-scale = Vector2(0.977418, 1.09003)
 text = "Jogar"
 script = SubResource("GDScript_ta841")
 
-[node name="Quit" type="Button" parent="."]
-offset_left = 711.0
+[node name="Sair" type="Button" parent="."]
+offset_left = 720.0
 offset_top = 754.0
-offset_right = 1175.0
-offset_bottom = 913.0
+offset_right = 1191.0
+offset_bottom = 922.0
 text = "Sair"
 script = SubResource("GDScript_83b8p")
 
 [connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_quit_pressed"]
