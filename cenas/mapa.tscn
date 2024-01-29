@@ -1,3 +1,26 @@
-[gd_scene format=3 uid="uid://dbjxqpf4s6w8g"]
+[gd_scene load_steps=3 format=3 uid="uid://dbjxqpf4s6w8g"]
+
+[ext_resource type="Texture2D" uid="uid://fbj6ujhagtpu" path="res://images/Peter_Griffin.png" id="1_xrieh"]
+
+[sub_resource type="GDScript" id="GDScript_sehte"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if Input.is_key_pressed(KEY_ESCAPE):
+		get_tree().quit()
+"
 
 [node name="Mapa" type="Node2D"]
+script = SubResource("GDScript_sehte")
+
+[node name="PeterGriffin" type="Sprite2D" parent="."]
+position = Vector2(550, 315)
+scale = Vector2(3.01493, 1.172)
+texture = ExtResource("1_xrieh")
