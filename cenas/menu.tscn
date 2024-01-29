@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn8r3kvv0k6q1"]
+
+[ext_resource type="Script" path="res://script/menu.gd" id="1_brlih"]
+
+[sub_resource type="GDScript" id="GDScript_ta841"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_83b8p"]
+script/source = "extends Button
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_brlih")
+
+[node name="Jogar" type="Button" parent="."]
+offset_left = 313.0
+offset_top = 101.0
+offset_right = 784.0
+offset_bottom = 269.0
+text = "Jogar"
+script = SubResource("GDScript_ta841")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 312.0
+offset_top = 380.0
+offset_right = 776.0
+offset_bottom = 539.0
+text = "Sair"
+script = SubResource("GDScript_83b8p")
+
+[connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
