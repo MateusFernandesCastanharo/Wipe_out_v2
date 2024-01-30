@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2prx4xnghnmf"
-path="res://.godot/imported/Grass.png-f0577f5af8463bb8dc175384685373c8.ctex"
+uid="uid://1hxsb3xxwi1w"
+path="res://.godot/imported/weak_enemy.png-28fdfdfc42fc6637951d7c6c64a193a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/map/Grass.png"
-dest_files=["res://.godot/imported/Grass.png-f0577f5af8463bb8dc175384685373c8.ctex"]
+source_file="res://images/enemies/variation2/weak_enemy.png"
+dest_files=["res://.godot/imported/weak_enemy.png-28fdfdfc42fc6637951d7c6c64a193a7.ctex"]
 
 [params]
 

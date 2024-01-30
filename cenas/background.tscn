@@ -1,14 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://cm22n7uuw7ao1"]
 
-[ext_resource type="Texture2D" uid="uid://b2prx4xnghnmf" path="res://images/map/Grass.png" id="1_4bbqh"]
+[ext_resource type="Texture2D" uid="uid://bl6mh6womk7hv" path="res://images/map/espaco.png" id="1_51pi7"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-scale = Vector2(4, 4)
-motion_mirroring = Vector2(256, 256)
+motion_mirroring = Vector2(1600, 754)
 
-[node name="Grass" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(35.75, 33.5)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_4bbqh")
+[node name="Espaco" type="Sprite2D" parent="ParallaxLayer"]
+texture = ExtResource("1_51pi7")
+centered = false

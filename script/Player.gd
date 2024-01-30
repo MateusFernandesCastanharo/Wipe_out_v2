@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED = 300.0
+@export var SPEED = 200.0
 
 
 func _physics_process(delta):
@@ -12,18 +12,21 @@ func _physics_process(delta):
 	
 	if directionX:
 		velocity.x = directionX * SPEED
-		if directionX == 1:
-			$AnimatedSprite2D.play("move")
-			$AnimatedSprite2D.flip_h = false
-		if directionX == -1:
-			$AnimatedSprite2D.play("move")
-			$AnimatedSprite2D.flip_h = true
 	else:
-		velocity.x = 0
-		$AnimatedSprite2D.stop()
+		if not velocity.x == 0:
+			velocity.x = velocity.x / 1.1
+		else:
+			velocity.x = 0
 		
 	if directionY:
 		velocity.y = directionY * SPEED
 	else:
-		velocity.y = 0
+		if not velocity.y == 0:
+			velocity.y /= 1.1
+		else:
+			velocity.y = 0
+	
+	$Spaceship.look_at(get_global_mouse_position())
+	$Spaceship.rotation_degrees -= -90
+	
 	move_and_slide()

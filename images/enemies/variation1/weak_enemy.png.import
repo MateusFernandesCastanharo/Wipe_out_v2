@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clfspact4nbai"
-path="res://.godot/imported/treepacknewest.png-c6ebe8a9f1a86c075ef7b2a271517c8a.ctex"
+uid="uid://emkgi77go826"
+path="res://.godot/imported/weak_enemy.png-0940c5281515c2c32ef8221c61380364.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/map/treepacknewest.png"
-dest_files=["res://.godot/imported/treepacknewest.png-c6ebe8a9f1a86c075ef7b2a271517c8a.ctex"]
+source_file="res://images/enemies/variation1/weak_enemy.png"
+dest_files=["res://.godot/imported/weak_enemy.png-0940c5281515c2c32ef8221c61380364.ctex"]
 
 [params]
 

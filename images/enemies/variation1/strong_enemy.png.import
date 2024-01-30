@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caaftxxlahvs3"
-path="res://.godot/imported/move.png-57d42c9f7cfe9e7dc3230e4240893e28.ctex"
+uid="uid://drto01ylob8fh"
+path="res://.godot/imported/strong_enemy.png-b23547099d54a9280f420cf448df3c4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Player/move.png"
-dest_files=["res://.godot/imported/move.png-57d42c9f7cfe9e7dc3230e4240893e28.ctex"]
+source_file="res://images/enemies/variation1/strong_enemy.png"
+dest_files=["res://.godot/imported/strong_enemy.png-b23547099d54a9280f420cf448df3c4e.ctex"]
 
 [params]
 

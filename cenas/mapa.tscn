@@ -22,5 +22,8 @@ func _process(delta):
 script = SubResource("GDScript_sehte")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_xtjrq")]
+position = Vector2(960, 540)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_1bik4")]

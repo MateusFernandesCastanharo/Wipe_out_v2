@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlqxinddhoote"
-path="res://.godot/imported/tileset.png-631d3d31eb77b5a8bbf7c583dd4c2d90.ctex"
+uid="uid://bk7u3lr0edfde"
+path="res://.godot/imported/strong_enemy.png-8516fb5a4c05ef3a9c50e00779f83761.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/map/tileset.png"
-dest_files=["res://.godot/imported/tileset.png-631d3d31eb77b5a8bbf7c583dd4c2d90.ctex"]
+source_file="res://images/enemies/variation3/strong_enemy.png"
+dest_files=["res://.godot/imported/strong_enemy.png-8516fb5a4c05ef3a9c50e00779f83761.ctex"]
 
 [params]
 
