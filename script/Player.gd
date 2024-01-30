@@ -4,7 +4,6 @@ extends CharacterBody2D
 
 @export var BULLET : PackedScene
 
-
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -28,16 +27,28 @@ func _physics_process(delta):
 		else:
 			velocity.y = 0
 	
-	$Spaceship.look_at(get_global_mouse_position())
-	$Spaceship.rotation_degrees -= -90
+	self.look_at(get_global_mouse_position())
+	self.rotation_degrees -= -90
 	
 	move_and_slide()
 
 func _on_attack_speed_t_imer_timeout():
+	
 	var bullet1 = BULLET.instantiate()
 	var bullet2 = BULLET.instantiate()
 	owner.add_child(bullet1)
 	owner.add_child(bullet2)
-	bullet1.position = $canhao1.position
-	bullet2.position = $canhao2.position
-	get_global_mouse_position()
+	#bullet1.transform = $canhao1.global_transform
+	#bullet2.transform = $canhao2.global_transform
+	
+	bullet1.position = $canhao1.global_position
+	bullet2.position = $canhao2.global_position
+	
+	bullet1.velocity = $reta1.global_position - bullet1.position 
+	bullet2.velocity = $reta2.global_position - bullet2.position 
+	
+	#$canhao1.rotation = self.rotation - PI/2
+	#$canhao2.rotation = self.rotation - PI/2
+	
+	
+	
