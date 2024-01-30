@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var SPEED = 200.0
 
+@export var BULLET : PackedScene
+
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
@@ -30,3 +32,12 @@ func _physics_process(delta):
 	$Spaceship.rotation_degrees -= -90
 	
 	move_and_slide()
+
+func _on_attack_speed_t_imer_timeout():
+	var bullet1 = BULLET.instantiate()
+	var bullet2 = BULLET.instantiate()
+	owner.add_child(bullet1)
+	owner.add_child(bullet2)
+	bullet1.position = $canhao1.position
+	bullet2.position = $canhao2.position
+	get_global_mouse_position()

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://3v1vi6ba7nee"]
+
+[ext_resource type="Texture2D" uid="uid://fbj6ujhagtpu" path="res://images/Peter_Griffin.png" id="1_jylpv"]
+[ext_resource type="Script" path="res://script/bullet.gd" id="1_t26dj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsyul"]
+size = Vector2(8, 24)
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_t26dj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_vsyul")
+
+[node name="PeterGriffin" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, 0)
+rotation = 1.5708
+scale = Vector2(0.0268657, 0.05)
+texture = ExtResource("1_jylpv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

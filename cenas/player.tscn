@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnajfucf3q7mm"]
+[gd_scene load_steps=5 format=3 uid="uid://bnajfucf3q7mm"]
 
 [ext_resource type="Script" path="res://script/Player.gd" id="1_ks1to"]
+[ext_resource type="PackedScene" uid="uid://3v1vi6ba7nee" path="res://cenas/bullet.tscn" id="2_fiiqq"]
 [ext_resource type="Texture2D" uid="uid://ci26k5fy06xnm" path="res://images/Player/Spaceship_05_BLUE.png" id="2_ytcfw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qfp1x"]
@@ -8,6 +9,7 @@ size = Vector2(61.3334, 49.3333)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ks1to")
+BULLET = ExtResource("2_fiiqq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.8, 1.8)
@@ -16,3 +18,15 @@ shape = SubResource("RectangleShape2D_qfp1x")
 [node name="Spaceship" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_ytcfw")
+
+[node name="AttackSpeedTImer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="canhao1" type="Marker2D" parent="."]
+position = Vector2(38, -7)
+
+[node name="canhao2" type="Marker2D" parent="."]
+position = Vector2(-38, -7)
+
+[connection signal="timeout" from="AttackSpeedTImer" to="." method="_on_attack_speed_t_imer_timeout"]
