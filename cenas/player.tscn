@@ -31,10 +31,4 @@ position = Vector2(-38, -5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="reta1" type="Marker2D" parent="."]
-position = Vector2(38, -44)
-
-[node name="reta2" type="Marker2D" parent="."]
-position = Vector2(-38, -44)
-
 [connection signal="timeout" from="AttackSpeedTImer" to="." method="_on_attack_speed_t_imer_timeout"]

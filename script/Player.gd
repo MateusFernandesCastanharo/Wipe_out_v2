@@ -36,16 +36,12 @@ func _on_attack_speed_t_imer_timeout():
 	
 	var bullet1 = BULLET.instantiate()
 	var bullet2 = BULLET.instantiate()
+	
 	owner.add_child(bullet1)
 	owner.add_child(bullet2)
-	#bullet1.transform = $canhao1.global_transform
-	#bullet2.transform = $canhao2.global_transform
 	
-	bullet1.position = $canhao1.global_position
-	bullet2.position = $canhao2.global_position
+	bullet1.transform = $canhao1.global_transform
+	bullet2.transform = $canhao2.global_transform
 	
-	bullet1.velocity = $reta1.global_position - bullet1.position 
-	bullet2.velocity = $reta2.global_position - bullet2.position 
-	
-	bullet1.rotation_degrees = self.rotation_degrees
-	bullet2.rotation_degrees = self.rotation_degrees
+	bullet1.rotation_degrees -= 90
+	bullet2.rotation_degrees -= 90

@@ -13,7 +13,8 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
-	position += velocity.normalized() * speed * delta
+	position += transform.x * speed * delta
+	#position += velocity.normalized() * speed * delta
 
 
 func _on_body_entered(body):
