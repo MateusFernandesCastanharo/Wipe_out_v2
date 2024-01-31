@@ -47,8 +47,5 @@ func _on_attack_speed_t_imer_timeout():
 	bullet1.velocity = $reta1.global_position - bullet1.position 
 	bullet2.velocity = $reta2.global_position - bullet2.position 
 	
-	#$canhao1.rotation = self.rotation - PI/2
-	#$canhao2.rotation = self.rotation - PI/2
-	
-	
-	
+	bullet1.rotation_degrees = self.rotation_degrees
+	bullet2.rotation_degrees = self.rotation_degrees
