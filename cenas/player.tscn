@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qfp1x"]
 size = Vector2(61.3334, 49.3333)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_ks1to")
 BULLET = ExtResource("2_fiiqq")
 
@@ -28,7 +28,5 @@ position = Vector2(38, -5)
 
 [node name="canhao2" type="Marker2D" parent="."]
 position = Vector2(-38, -5)
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="timeout" from="AttackSpeedTImer" to="." method="_on_attack_speed_t_imer_timeout"]

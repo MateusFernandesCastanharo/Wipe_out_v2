@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpskr7khb0aig"]
+
+[ext_resource type="Texture2D" uid="uid://cl63nfu8l7xgp" path="res://images/ui/HpBar.png" id="1_5k6sg"]
+[ext_resource type="Script" path="res://script/hud.gd" id="1_ugvud"]
+[ext_resource type="Texture2D" uid="uid://bl7uav7guwbns" path="res://images/ui/preenche.png" id="2_qpnxc"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_ugvud")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = 27.0
+offset_top = 29.0
+offset_right = 964.0
+offset_bottom = 153.0
+scale = Vector2(0.5, 0.5)
+value = 100.0
+texture_under = ExtResource("1_5k6sg")
+texture_progress = ExtResource("2_qpnxc")
+texture_progress_offset = Vector2(21, 16)

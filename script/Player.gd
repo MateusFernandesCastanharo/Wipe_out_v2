@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 @export var SPEED = 200.0
-
 @export var BULLET : PackedScene
+var health = 100
+signal healthChange(health)
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
@@ -37,8 +38,8 @@ func _on_attack_speed_t_imer_timeout():
 	var bullet1 = BULLET.instantiate()
 	var bullet2 = BULLET.instantiate()
 	
-	owner.add_child(bullet1)
-	owner.add_child(bullet2)
+	get_parent().add_child(bullet1)
+	get_parent().add_child(bullet2)
 	
 	bullet1.transform = $canhao1.global_transform
 	bullet2.transform = $canhao2.global_transform

@@ -1,15 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbjxqpf4s6w8g"]
+[gd_scene load_steps=6 format=3 uid="uid://dbjxqpf4s6w8g"]
 
+[ext_resource type="PackedScene" uid="uid://4vcrp4dixhmh" path="res://cenas/enemy.tscn" id="1_gdicx"]
 [ext_resource type="PackedScene" uid="uid://bnajfucf3q7mm" path="res://cenas/player.tscn" id="1_xtjrq"]
 [ext_resource type="PackedScene" uid="uid://cm22n7uuw7ao1" path="res://cenas/background.tscn" id="2_1bik4"]
+[ext_resource type="PackedScene" uid="uid://dpskr7khb0aig" path="res://cenas/hud.tscn" id="2_mr11p"]
 
 [sub_resource type="GDScript" id="GDScript_sehte"]
 script/source = "extends Node2D
 
+@export var ENEMY : PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var enemy1 = ENEMY.instantiate()
+	add_child(enemy1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,8 +24,18 @@ func _process(delta):
 
 [node name="Mapa" type="Node2D"]
 script = SubResource("GDScript_sehte")
+ENEMY = ExtResource("1_gdicx")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_xtjrq")]
 position = Vector2(960, 540)
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(3.00006, 2)
+scale = Vector2(0.179236, 0.31359)
+position_smoothing_enabled = true
+
+[node name="CanvasLayer" parent="CharacterBody2D/Camera2D" instance=ExtResource("2_mr11p")]
+
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_1bik4")]
+
+[connection signal="healthChange" from="CharacterBody2D" to="CharacterBody2D/Camera2D/CanvasLayer" method="_on_character_body_2d_health_change"]

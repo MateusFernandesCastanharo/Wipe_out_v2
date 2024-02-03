@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://4vcrp4dixhmh"]
+
+[ext_resource type="Script" path="res://script/enemy.gd" id="1_ado0v"]
+[ext_resource type="Texture2D" uid="uid://emkgi77go826" path="res://images/enemies/variation1/weak_enemy.png" id="1_dx383"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrc15"]
+size = Vector2(120, 82)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_ado0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hrc15")
+
+[node name="WeakEnemy" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_dx383")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="canhao1" type="Marker2D" parent="."]
+position = Vector2(-28, -13)
+
+[node name="canhao2" type="Marker2D" parent="."]
+position = Vector2(28, -13)
