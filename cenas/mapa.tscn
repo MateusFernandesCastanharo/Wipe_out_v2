@@ -30,8 +30,6 @@ ENEMY = ExtResource("1_gdicx")
 position = Vector2(960, 540)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(3.00006, 2)
-scale = Vector2(0.179236, 0.31359)
 position_smoothing_enabled = true
 
 [node name="CanvasLayer" parent="CharacterBody2D/Camera2D" instance=ExtResource("2_mr11p")]

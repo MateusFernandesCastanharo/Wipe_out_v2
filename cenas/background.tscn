@@ -3,12 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://bl6mh6womk7hv" path="res://images/map/espaco.png" id="1_51pi7"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
-scale = Vector2(2, 2)
-transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1600, 754)
+motion_mirroring = Vector2(3200, 1508)
 
 [node name="Espaco" type="Sprite2D" parent="ParallaxLayer"]
+scale = Vector2(2, 2)
 texture = ExtResource("1_51pi7")
 centered = false
